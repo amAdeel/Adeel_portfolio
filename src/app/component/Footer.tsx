@@ -1,24 +1,24 @@
-import { FOOTER_CONTACT_INFO, FOOTER_LINKS, SOCIALS } from '../../../constants'
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
+import { FOOTER_CONTACT_INFO, FOOTER_LINKS, SOCIALS } from '../../../constants';
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="flexCenter mb-24 pt-20 ">
+    <footer className="flexCenter mb-24 mt-5">
       <div className="padding-container max-container flex w-full flex-col gap-14">
         <div className="flex flex-col items-start justify-center gap-[10%] md:flex-row">
           <Link href="/" className="mb-10">
-          <Image src="/adeel website logo.jpeg" alt="logo" width={74} height={29} className="rounded-full " /> 
+            <Image src="/adeel website logo.jpeg" alt="logo" width={74} height={29} className="rounded-full "/>
           </Link>
 
           <div className='flex flex-wrap gap-10 sm:justify-between md:flex-1'>
-            {FOOTER_LINKS.map((columns) => (
-              <FooterColumn title={columns.title}>
+            {FOOTER_LINKS.map((columns, index) => (
+              <FooterColumn title={columns.title} key={index}>
                 <ul className="regular-14 flex flex-col gap-4 text-gray-30">
-                  {columns.links.map((link) => (
-                    <Link href="/" key={link}>
-                      {link}
+                  {columns.links.map((link, subIndex) => (
+                    <Link href="/" key={subIndex}>
+                      {link.label}
                     </Link>
                   ))}
                 </ul>
@@ -26,43 +26,20 @@ const Footer = () => {
             ))}
 
             <div className="flex flex-col gap-5">
-              <FooterColumn title={FOOTER_CONTACT_INFO.title}>
-                {FOOTER_CONTACT_INFO.links.map((link) => (
-                  <Link
-                    href="/"
-                    key={link.label}
-                    className="flex gap-4 md:flex-col lg:flex-row"
-                  >
-                    <p className="whitespace-nowrap">
-                      {link.label}:
-                    </p>
-                    <p className="medium-14 whitespace-nowrap text-yellow-600">
-                      {link.value}
-                    </p>
-                  </Link>
-                ))}
-              </FooterColumn>
-            </div>
-
-            <div className="flex flex-col gap-5">
               <FooterColumn title={SOCIALS.title}>
                 <ul className="regular-14 flex gap-4 text-gray-30">
-                    <Link href="https://www.facebook.com/maher.adeel.96199/">
+                    <Link href="https://www.facebook.com/maher.adeel.96199/" key="facebook">
                       <Image src="/facebook.svg" alt="logo" width={24} height={24} />
                     </Link>
-                    <Link href="https://www.instagram.com/maher_adeel_6421/">
+                    <Link href="https://www.instagram.com/maher_adeel_6421/" key="instagram">
                       <Image src="/instagram.svg" alt="logo" width={24} height={24} />
                     </Link>
-                    <Link href="/">
+                    <Link href="/" key="twitter">
                       <Image src="/twitter.svg" alt="logo" width={24} height={24} />
                     </Link>
-                    <Link href="https://www.youtube.com/@thisisMrAdeeel">
+                    <Link href="https://www.youtube.com/@thisisMrAdeeel" key="youtube">
                       <Image src="/youtube.svg" alt="logo" width={24} height={24} />
                     </Link>
-
-
-
-                
                 </ul>
               </FooterColumn>
             </div>
@@ -73,13 +50,13 @@ const Footer = () => {
         <p className="regular-14 w-full text-center text-gray-30">2024 Maher Adeel | All rights reserved</p>
       </div>
     </footer>
-  )
-}
+  );
+};
 
 type FooterColumnProps = {
-  title?: string;
-  children?: React.ReactNode;
-}
+  title: string;
+  children: React.ReactNode;
+};
 
 const FooterColumn = ({ title, children }: FooterColumnProps) => {
   return (
@@ -87,7 +64,7 @@ const FooterColumn = ({ title, children }: FooterColumnProps) => {
       <h4 className="bold-18 whitespace-nowrap">{title}</h4>
       {children}
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

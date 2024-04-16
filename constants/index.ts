@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 // NAVIGATION
 export const NAV_LINKS = [
     { href: '/', key: 'home', label: 'Home' },
@@ -13,17 +14,21 @@ export const NAV_LINKS = [
     {
       title: 'Learn More',
       links: [
-        'About Adeel',
-        'Press Releases',
-        'Environment',
-        'Jobs',
-        'Privacy Policy',
-        'Contact Us',
+        { id: uuidv4(), label: 'About Adeel' },
+        { id: uuidv4(), label: 'Press Releases' },
+        { id: uuidv4(), label: 'Environment' },
+        { id: uuidv4(), label: 'Jobs' },
+        { id: uuidv4(), label: 'Privacy Policy' },
+        { id: uuidv4(), label: 'Contact Us' },
       ],
     },
     {
       title: 'Our Community',
-      links: ['Climbing xixixi', 'Maher', 'Adeel'],
+      links: [
+        { id: uuidv4(), label: 'Climbing xixixi' },
+        { id: uuidv4(), label: 'Maher' },
+        { id: uuidv4(), label: 'Adeel' },
+      ],
     },
   ];
   
