@@ -12,9 +12,9 @@ const Navbar = () => {
       <Link href="/">
         <Image src="/adeel website logo.jpeg" alt="logo" width={74} height={29} className="rounded-full" /> 
       </Link>
-      <ul className=" h-full flex flex-row  lg:gap-12   md:gap-12 md:flexCenter md:flex  xs:gap-6 lg:flex">
+      <ul className=" h-full flex flex-row  lg:gap-12   md:gap-12 md:flexCenter md:flex  xs:gap-6 lg:flex ">
         {NAV_LINKS.map((link) => (
-          <Link href={link.href} key={link.key} className="lg:text-[20px] text-white flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold xs:text-[15px] xs:pl-2 xl:text-[40px] ">
+          <Link href={link.href} key={link.key} className="lg:text-[20px] text-white flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold xs:text-[15px] xs:ml-2 xs:border-2 xs:border-white xs:rounded-lg xl:text-[40px] ">
             {link.label}
           </Link>
         ))}
