@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const page = () => {
   return (
-    <section className=" max-container padding-container flex flex-col gap-20 py-02 pb-32 md:gap-28 lg:py-0 xl:flex-row ">
+    <section className=" max-container padding-container flex flex-col gap-20 py-02 pb-32 md:gap-28 lg:py-0 xl:flex-col ">
       <div className='flex justify-center items-center my-5'>
               <h1 className="bold-52 lg:bold-88 ">
                 My Skills </h1>

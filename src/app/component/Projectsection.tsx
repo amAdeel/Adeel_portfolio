@@ -44,7 +44,7 @@ const PROJECT_DATA = [
 
 const Projectsection = () => {
   return (
-    <section className=" max-container padding-container flex flex-col gap-20 py-0 pb-0  mb-0 md:gap-28 lg:py-0 xl:flex-row  ">
+    <section className=" max-container padding-container flex flex-col gap-20 py-0 pb-0  mb-0 md:gap-28 lg:py-0 xl:flex-col  ">
               <h1 className="bold-52 lg:bold-88 text-center my-4 ">
                 My Projects </h1>
                 

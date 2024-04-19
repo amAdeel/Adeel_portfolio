@@ -7,7 +7,7 @@ import { TypeAnimation } from 'react-type-animation';
 
 const Hero = () => {
   return (
-    <section className=" max-container padding-container flex flex-col gap-20 py-02 pb-32 md:gap-28 lg:py-0 xl:flex-row ">
+    <section className=" max-container padding-container flex flex-col gap-20 py-02 pb-32 md:gap-28 lg:py-0 xl:flex-col ">
       <div className="hero-map " />
       <div className='flex flex-col lg:flex-row'>
 
